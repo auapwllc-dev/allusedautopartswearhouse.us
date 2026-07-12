@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>&#128222; {{ site.phone }}</span>
+      <span>&#9993; {{ site.email }}</span>
+      <span>&#9201; {{ site.hours.weekdays }} &nbsp;|&nbsp; {{ site.hours.saturday }} &nbsp;|&nbsp; {{ site.hours.sunday }}</span>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ '/' | relative_url }}" class="logo">
+        <span class="logo-icon">&#128663;</span>
+        <div class="logo-text">
+          <span class="logo-main">All Used Auto Parts</span>
+          <span class="logo-sub">Warehouse</span>
+        </div>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+        <a href="{{ '/about' | relative_url }}" {% if page.url == '/about' or page.url == '/about/' %}class="active"{% endif %}>About Us</a>
+        <a href="{{ '/inventory' | relative_url }}" {% if page.url == '/inventory' or page.url == '/inventory/' %}class="active"{% endif %}>Inventory</a>
+        <a href="{{ '/contact' | relative_url }}" {% if page.url == '/contact' or page.url == '/contact/' %}class="active"{% endif %}>Contact</a>
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary nav-cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>All Used Auto Parts Warehouse</h3>
+        <p>{{ site.description }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about' | relative_url }}">About Us</a></li>
+          <li><a href="{{ '/inventory' | relative_url }}">Inventory</a></li>
+          <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>{{ site.address }}</p>
+        <p>{{ site.phone }}</p>
+        <p>{{ site.email }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>{{ site.hours.weekdays }}</p>
+        <p>{{ site.hours.saturday }}</p>
+        <p>{{ site.hours.sunday }}</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; {{ 'now' | date: "%Y" }} All Used Auto Parts Warehouse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var toggle = document.getElementById('navToggle');
+    var nav = document.getElementById('siteNav');
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
