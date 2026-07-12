@@ -1,0 +1,234 @@
+---
+layout: default
+title: Inventory
+description: >-
+  Browse All Used Auto Parts Warehouse inventory – engines, transmissions,
+  body parts, electrical components, and more for all makes and models.
+---
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <h1>Parts Inventory</h1>
+    <p>50,000+ quality-inspected parts ready to ship. Search below or call us for a custom quote.</p>
+  </div>
+</div>
+
+<!-- Search -->
+<section>
+  <div class="container">
+    <div class="part-search">
+      <h3>&#128269; Search Our Inventory</h3>
+      <div class="search-grid">
+        <div class="form-group">
+          <label for="year">Year</label>
+          <select id="year" name="year">
+            <option value="">Select Year</option>
+            {% assign current_year = 'now' | date: "%Y" | plus: 0 %}
+            {% for i in (1990..current_year) %}
+            <option value="{{ current_year | minus: forloop.index0 }}">{{ current_year | minus: forloop.index0 }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="make">Make</label>
+          <select id="make" name="make">
+            <option value="">Select Make</option>
+            <option>Acura</option><option>BMW</option><option>Buick</option>
+            <option>Cadillac</option><option>Chevrolet</option><option>Chrysler</option>
+            <option>Dodge</option><option>Ford</option><option>GMC</option>
+            <option>Honda</option><option>Hyundai</option><option>Infiniti</option>
+            <option>Jeep</option><option>Kia</option><option>Lexus</option>
+            <option>Lincoln</option><option>Mazda</option><option>Mercedes-Benz</option>
+            <option>Mitsubishi</option><option>Nissan</option><option>Ram</option>
+            <option>Subaru</option><option>Tesla</option><option>Toyota</option>
+            <option>Volkswagen</option><option>Volvo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="model">Model</label>
+          <input type="text" id="model" name="model" placeholder="e.g., Camry, F-150">
+        </div>
+        <div class="form-group">
+          <label for="part">Part Type</label>
+          <select id="part" name="part">
+            <option value="">All Parts</option>
+            <option>Engine</option><option>Transmission</option>
+            <option>Alternator</option><option>Starter</option>
+            <option>Door Panel</option><option>Hood</option>
+            <option>Fender</option><option>Bumper</option>
+            <option>Headlight</option><option>Taillight</option>
+            <option>Radiator</option><option>A/C Compressor</option>
+            <option>Axle / CV Axle</option><option>Control Arm</option>
+            <option>Wheel / Rim</option><option>Seat</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group search-btn-wrap">
+          <a href="/contact" class="btn btn-primary" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notice -->
+<div style="background:#fef9e7;border-top:3px solid #f39c12;padding:1rem 0;">
+  <div class="container" style="display:flex;gap:.75rem;align-items:center;">
+    <span style="font-size:1.4rem;">&#9888;</span>
+    <p style="font-size:.9rem;color:#7d6608;">
+      <strong>Looking for a specific part?</strong> Our full inventory is best searched by calling
+      <strong>{{ site.phone }}</strong> or submitting a quote request. Our team can check availability
+      and price in seconds.
+    </p>
+  </div>
+</div>
+
+<!-- Featured Parts -->
+<section class="inventory-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Featured <span>Parts</span></h2>
+      <p>A sample of recently added inventory — call or email for current availability and pricing.</p>
+    </div>
+    <div class="parts-grid">
+
+      <!-- Engines -->
+      <div class="part-card">
+        <div class="part-card-img">&#128295;</div>
+        <div class="part-card-body">
+          <h3>2018 Toyota Camry 2.5L Engine (4-Cyl)</h3>
+          <p class="part-sku">SKU: ENG-18-CAM-2500</p>
+          <p class="part-price">$1,295</p>
+          <span class="part-condition">Grade A – Tested</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-card-img">&#128295;</div>
+        <div class="part-card-body">
+          <h3>2016 Ford F-150 5.0L V8 Engine</h3>
+          <p class="part-sku">SKU: ENG-16-F150-5000</p>
+          <p class="part-price">$2,450</p>
+          <span class="part-condition">Grade A – Tested</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Transmissions -->
+      <div class="part-card">
+        <div class="part-card-img">&#9881;</div>
+        <div class="part-card-body">
+          <h3>2019 Honda Accord 1.5T CVT Transmission</h3>
+          <p class="part-sku">SKU: TRN-19-ACC-CVT</p>
+          <p class="part-price">$875</p>
+          <span class="part-condition">Grade B – Good Condition</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-card-img">&#9881;</div>
+        <div class="part-card-body">
+          <h3>2017 Chevy Silverado 6L80E 6-Speed Auto Trans.</h3>
+          <p class="part-sku">SKU: TRN-17-SIL-6L80E</p>
+          <p class="part-price">$1,100</p>
+          <span class="part-condition">Grade A – Tested</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Body Parts -->
+      <div class="part-card">
+        <div class="part-card-img">&#128664;</div>
+        <div class="part-card-body">
+          <h3>2020 Toyota Corolla Front Bumper Assembly</h3>
+          <p class="part-sku">SKU: BMP-20-COR-FRT</p>
+          <p class="part-price">$195</p>
+          <span class="part-condition">Grade A – Like New</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-card-img">&#128664;</div>
+        <div class="part-card-body">
+          <h3>2018 Nissan Altima Passenger Door Shell</h3>
+          <p class="part-sku">SKU: DR-18-ALT-RH</p>
+          <p class="part-price">$145</p>
+          <span class="part-condition">Grade B – Minor Scratches</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Electrical -->
+      <div class="part-card">
+        <div class="part-card-img">&#128161;</div>
+        <div class="part-card-body">
+          <h3>2015 Ford Escape 1.6L Alternator</h3>
+          <p class="part-sku">SKU: ALT-15-ESC-16</p>
+          <p class="part-price">$89</p>
+          <span class="part-condition">Grade A – Tested</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-card-img">&#128161;</div>
+        <div class="part-card-body">
+          <h3>2017 Jeep Grand Cherokee ECU/PCM</h3>
+          <p class="part-sku">SKU: ECU-17-GC-V6</p>
+          <p class="part-price">$225</p>
+          <span class="part-condition">Grade A – Tested</span>
+        </div>
+        <div class="part-card-footer">
+          <a href="/contact" class="btn btn-outline" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Browse by <span>Category</span></h2>
+    </div>
+    <div class="categories-grid">
+      <div class="category-card"><div class="icon">&#128295;</div><h3>Engines</h3></div>
+      <div class="category-card"><div class="icon">&#9881;</div><h3>Transmissions</h3></div>
+      <div class="category-card"><div class="icon">&#128664;</div><h3>Body Parts</h3></div>
+      <div class="category-card"><div class="icon">&#128161;</div><h3>Electrical</h3></div>
+      <div class="category-card"><div class="icon">&#127940;</div><h3>Wheels &amp; Tires</h3></div>
+      <div class="category-card"><div class="icon">&#10052;</div><h3>A/C &amp; Heating</h3></div>
+      <div class="category-card"><div class="icon">&#128339;</div><h3>Suspension</h3></div>
+      <div class="category-card"><div class="icon">&#128512;</div><h3>Interior</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Don't See What You're Looking For?</h2>
+    <p>We have access to an extended network of 200+ salvage yards. Describe the part and we'll find it for you.</p>
+    <a href="/contact" class="btn btn-white btn-lg">Submit a Part Request</a>
+  </div>
+</div>
