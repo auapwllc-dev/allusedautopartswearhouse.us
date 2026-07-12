@@ -1,0 +1,213 @@
+---
+layout: default
+title: Home
+description: >-
+  All Used Auto Parts Warehouse – your #1 source for quality used engines,
+  transmissions, body parts, and more. Serving customers nationwide.
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Quality Used Auto Parts<br><span>At Unbeatable Prices</span></h1>
+    <p>Massive inventory of engines, transmissions, body parts, and accessories
+       for all makes and models. Fast shipping. Every part inspected and guaranteed.</p>
+    <div class="hero-btns">
+      <a href="/inventory" class="btn btn-white btn-lg">Browse Inventory</a>
+      <a href="/contact" class="btn btn-outline btn-lg" style="color:#fff;border-color:#fff;">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Choose <span>All Used Auto Parts</span> Warehouse?</h2>
+      <p>We've been helping customers find the right parts at the right price for over 20 years.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">&#9989;</div>
+        <h3>Quality Guaranteed</h3>
+        <p>Every part is inspected, cleaned, and tested before it ships to you.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128666;</div>
+        <h3>Fast Nationwide Shipping</h3>
+        <p>Parts ship same or next business day to anywhere in the contiguous US.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128176;</div>
+        <h3>Lowest Prices</h3>
+        <p>Save up to 80% compared to new OEM parts — without sacrificing quality.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128221;</div>
+        <h3>Warranty Included</h3>
+        <p>Most parts come with our 90-day hassle-free replacement warranty.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128222;</div>
+        <h3>Expert Support</h3>
+        <p>Our knowledgeable staff will help you find the exact part you need.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128337;</div>
+        <h3>Same-Day Availability</h3>
+        <p>Huge in-stock inventory means most parts are ready for pickup or ship today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Part Search -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Find Your <span>Part</span></h2>
+      <p>Search our inventory by year, make, model, and part type.</p>
+    </div>
+    <div class="part-search">
+      <h3>&#128269; Search Our Inventory</h3>
+      <div class="search-grid">
+        <div class="form-group">
+          <label for="year">Year</label>
+          <select id="year" name="year">
+            <option value="">Select Year</option>
+            {% assign current_year = 'now' | date: "%Y" | plus: 0 %}
+            {% for i in (1990..current_year) %}
+            <option value="{{ current_year | minus: forloop.index0 }}">{{ current_year | minus: forloop.index0 }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="make">Make</label>
+          <select id="make" name="make">
+            <option value="">Select Make</option>
+            <option>Acura</option><option>BMW</option><option>Buick</option>
+            <option>Cadillac</option><option>Chevrolet</option><option>Chrysler</option>
+            <option>Dodge</option><option>Ford</option><option>GMC</option>
+            <option>Honda</option><option>Hyundai</option><option>Infiniti</option>
+            <option>Jeep</option><option>Kia</option><option>Lexus</option>
+            <option>Lincoln</option><option>Mazda</option><option>Mercedes-Benz</option>
+            <option>Mitsubishi</option><option>Nissan</option><option>Ram</option>
+            <option>Subaru</option><option>Tesla</option><option>Toyota</option>
+            <option>Volkswagen</option><option>Volvo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="model">Model</label>
+          <input type="text" id="model" name="model" placeholder="e.g., Camry, F-150">
+        </div>
+        <div class="form-group">
+          <label for="part">Part Type</label>
+          <select id="part" name="part">
+            <option value="">Select Part</option>
+            <option>Engine</option><option>Transmission</option>
+            <option>Alternator</option><option>Starter</option>
+            <option>Door Panel</option><option>Hood</option>
+            <option>Fender</option><option>Bumper</option>
+            <option>Headlight</option><option>Taillight</option>
+            <option>Radiator</option><option>A/C Compressor</option>
+            <option>Axle / CV Axle</option><option>Control Arm</option>
+            <option>Wheel / Rim</option><option>Seat</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group search-btn-wrap">
+          <a href="/contact" class="btn btn-primary" style="width:100%;text-align:center;">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-num">50,000+</div>
+        <div class="stat-label">Parts in Stock</div>
+      </div>
+      <div>
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div>
+        <div class="stat-num">100k+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div>
+        <div class="stat-num">All 50</div>
+        <div class="stat-label">States Served</div>
+      </div>
+      <div>
+        <div class="stat-num">90-Day</div>
+        <div class="stat-label">Warranty</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Part Categories -->
+<section class="bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Shop by <span>Category</span></h2>
+      <p>We carry parts for every system of your vehicle — all at salvage yard prices.</p>
+    </div>
+    <div class="categories-grid">
+      <div class="category-card">
+        <div class="icon">&#128295;</div>
+        <h3>Engines</h3>
+        <p>Gas, diesel, hybrid</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">&#9881;</div>
+        <h3>Transmissions</h3>
+        <p>Auto &amp; manual</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">&#128664;</div>
+        <h3>Body Parts</h3>
+        <p>Doors, hoods, fenders</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">&#128161;</div>
+        <h3>Electrical</h3>
+        <p>Alternators, starters, ECUs</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">&#127940;</div>
+        <h3>Wheels &amp; Tires</h3>
+        <p>OEM rims &amp; used tires</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">&#10052;</div>
+        <h3>A/C &amp; Heating</h3>
+        <p>Compressors, condensers</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">&#128512;</div>
+        <h3>Interior</h3>
+        <p>Seats, dashboards, trim</p>
+      </div>
+      <div class="category-card">
+        <div class="icon">&#128339;</div>
+        <h3>Suspension</h3>
+        <p>Control arms, struts</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="container">
+    <h2>Can't Find the Part You Need?</h2>
+    <p>Our team has access to an extended network of over 200 salvage yards. If we don't have it in stock, we can find it fast.</p>
+    <a href="/contact" class="btn btn-white btn-lg">Contact Us Today</a>
+  </div>
+</div>
