@@ -1,0 +1,171 @@
+---
+layout: default
+title: Contact Us
+description: >-
+  Contact All Used Auto Parts Warehouse – get a free quote, ask about a part,
+  or visit our warehouse. We're here to help Monday through Saturday.
+---
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Have a question or need a part? Our team is ready to help.</p>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section>
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info Column -->
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+
+        <div class="contact-detail">
+          <span class="icon">&#128222;</span>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+18005552886">{{ site.phone }}</a></p>
+            <p style="font-size:.82rem;color:#7f8c8d;">{{ site.hours.weekdays }}<br>{{ site.hours.saturday }}</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="icon">&#9993;</span>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            <p style="font-size:.82rem;color:#7f8c8d;">We typically respond within 2 business hours.</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="icon">&#128205;</span>
+          <div>
+            <h4>Location</h4>
+            <p>{{ site.address }}</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="icon">&#9201;</span>
+          <div>
+            <h4>Hours of Operation</h4>
+            <p>{{ site.hours.weekdays }}</p>
+            <p>{{ site.hours.saturday }}</p>
+            <p>{{ site.hours.sunday }}</p>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;padding:1.25rem;background:#fdedec;border-left:4px solid #c0392b;border-radius:4px;">
+          <p style="font-size:.9rem;color:#641e16;">
+            <strong>Need a part fast?</strong> Call us directly for the quickest
+            response. Our parts specialists can check availability and pricing in real time.
+          </p>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div class="contact-form-wrap">
+        <h3>Request a Part or Quote</h3>
+        <!-- TODO: Replace "your-form-id" with your actual Formspree endpoint ID from https://formspree.io -->
+        <form action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first_name">First Name *</label>
+              <input type="text" id="first_name" name="first_name" required placeholder="John">
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name *</label>
+              <input type="text" id="last_name" name="last_name" required placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="vehicle">Vehicle (Year / Make / Model)</label>
+            <input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2018 Toyota Camry">
+          </div>
+          <div class="form-group">
+            <label for="part_needed">Part(s) Needed *</label>
+            <input type="text" id="part_needed" name="part_needed" required placeholder="e.g., Engine 2.5L, Front bumper, Left door panel">
+          </div>
+          <div class="form-group">
+            <label for="message">Additional Notes or Questions</label>
+            <textarea id="message" name="message" placeholder="Any additional details, VIN number, trim level, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+            &#128231; Send Request
+          </button>
+          <p style="font-size:.78rem;color:#7f8c8d;margin-top:.75rem;text-align:center;">
+            By submitting this form you agree to be contacted about your part request. We do not share your information.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Map Placeholder -->
+<section class="bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Find <span>Our Warehouse</span></h2>
+      <p>Conveniently located with easy truck and trailer access.</p>
+    </div>
+    <div style="background:#d5d8dc;border-radius:8px;height:280px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:#566573;">
+      <span style="font-size:3rem;">&#128205;</span>
+      <p style="font-weight:600;">{{ site.address }}</p>
+      <p style="font-size:.85rem;">Open: {{ site.hours.weekdays }} &nbsp;|&nbsp; {{ site.hours.saturday }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container" style="max-width:760px;">
+    <div class="section-title">
+      <h2>Frequently Asked <span>Questions</span></h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+
+      <div style="border:1px solid #d5d8dc;border-radius:6px;padding:1.25rem;">
+        <h4 style="margin-bottom:.5rem;">Do you ship parts nationwide?</h4>
+        <p style="color:#566573;font-size:.92rem;">Yes! We ship to all 50 states via UPS, FedEx, and freight carriers for large items. Most orders ship same or next business day.</p>
+      </div>
+
+      <div style="border:1px solid #d5d8dc;border-radius:6px;padding:1.25rem;">
+        <h4 style="margin-bottom:.5rem;">What warranty do your parts come with?</h4>
+        <p style="color:#566573;font-size:.92rem;">Most parts include our 90-day hassle-free replacement warranty. Warranty details vary by part type — ask us when you order.</p>
+      </div>
+
+      <div style="border:1px solid #d5d8dc;border-radius:6px;padding:1.25rem;">
+        <h4 style="margin-bottom:.5rem;">Can I pick up parts in person?</h4>
+        <p style="color:#566573;font-size:.92rem;">Absolutely. Our warehouse is open for in-person pickup Mon–Fri 8–6 and Sat 9–4. Please call ahead to confirm the part is ready.</p>
+      </div>
+
+      <div style="border:1px solid #d5d8dc;border-radius:6px;padding:1.25rem;">
+        <h4 style="margin-bottom:.5rem;">How do I know if a part will fit my vehicle?</h4>
+        <p style="color:#566573;font-size:.92rem;">Our team verifies compatibility using VIN data and OEM fitment guides. Providing your VIN when you inquire gives us the most accurate match.</p>
+      </div>
+
+      <div style="border:1px solid #d5d8dc;border-radius:6px;padding:1.25rem;">
+        <h4 style="margin-bottom:.5rem;">Do you accept returns?</h4>
+        <p style="color:#566573;font-size:.92rem;">Yes. Parts can be returned within 30 days if unused and in the original packaging. Parts covered by the 90-day warranty are replaced, not refunded.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
